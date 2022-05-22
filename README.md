@@ -1,7 +1,11 @@
 import smbus
+
 from time import sleep
+
 import smtplib
+
 from email.mime.multipart import MIMEMultipart
+
 from email.mime.text import MIMEText
 
 bmp_addr = 0x77
