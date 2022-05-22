@@ -1,3 +1,5 @@
+#importeer libraries
+
 import smbus
 
 from time import sleep
@@ -8,6 +10,7 @@ from email.mime.multipart import MIMEMultipart
 
 from email.mime.text import MIMEText
 
+#setup
 bmp_addr = 0x77
 
 i2c = smbus.SMBus(1)
@@ -25,7 +28,7 @@ if(dig_T2 > 32767):
     dig_T2 -= 65536
 if(dig_T3 > 32767):
     dig_T3 -= 65536
-
+#temperatuur calculeren
 while True:
 
     d1 = i2c.read_byte_data(bmp_addr, 0xfa)
@@ -40,6 +43,7 @@ while True:
     t_fine = var1 + var2;
     T = (t_fine * 5 + 128) >> 8;
     T = T / 100
+    #mail sturen
     if(T < 15):
         mail_content = "Hello, the temperature is under 15 degrees celcius"
         #The mail addresses and password
