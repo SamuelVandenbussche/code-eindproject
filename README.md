@@ -30,6 +30,7 @@ if(dig_T2 > 32767):
 if(dig_T3 > 32767):
     dig_T3 -= 65536
 #temperatuur calculeren
+
 while True:
 
     d1 = i2c.read_byte_data(bmp_addr, 0xfa)
