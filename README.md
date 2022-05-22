@@ -11,6 +11,7 @@ from email.mime.multipart import MIMEMultipart
 from email.mime.text import MIMEText
 
 #setup
+
 bmp_addr = 0x77
 
 i2c = smbus.SMBus(1)
