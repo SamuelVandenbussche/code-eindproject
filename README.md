@@ -29,6 +29,7 @@ if(dig_T2 > 32767):
     dig_T2 -= 65536
 if(dig_T3 > 32767):
     dig_T3 -= 65536
+    
 #temperatuur calculeren
 
 while True:
